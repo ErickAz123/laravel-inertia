@@ -1,6 +1,10 @@
+import { usePage } from "@inertiajs/react";
 import { Menu, Bell, User } from "lucide-react";
 
 export default function Navbar({ toggleSidebar }) {
+
+    const { props } = usePage();
+    const title = props.title
     return (
         <div className="h-16 bg-blue-900 border-b border-blue-800 flex items-center justify-between px-6">
             {/* Left */}
@@ -13,7 +17,7 @@ export default function Navbar({ toggleSidebar }) {
                 </button>
 
                 <span className="text-lg font-semibold tracking-wide text-white">
-                    Dashboard
+                    {title}
                 </span>
             </div>
 

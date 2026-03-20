@@ -21,7 +21,7 @@ class LoginAuthUser extends Controller
     {
         $request->authenticate();
 
-        $request->sessions()->regenerate();
+        $request->session()->regenerate();
 
         return redirect()->intended(route('dashboard', absolute: false));
 
