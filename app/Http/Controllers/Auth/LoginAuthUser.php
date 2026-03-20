@@ -19,7 +19,7 @@ class LoginAuthUser extends Controller
 
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authecticate();
+        $request->authenticate();
 
         $request->sessions()->regenerate();
 

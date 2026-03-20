@@ -26,7 +26,7 @@ class LoginRequest extends FormRequest
         ];
     }
 
-    public function authenticated(): void
+    public function authenticate(): void
     {
         $this->ensureIsNotLimited();
 
@@ -37,10 +37,10 @@ class LoginRequest extends FormRequest
                 'username' => trans('auth.failed'),
             ]);
         }
-        RateLimiter::clear($this->throtleKey());
+        RateLimiter::clear($this->throttleKey());
     }
 
-    public function ensureIsNotRateLimited(): void
+    public function ensureIsNotLimited(): void
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
             return;
