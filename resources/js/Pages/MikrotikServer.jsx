@@ -1,5 +1,5 @@
 import AuthLayout from "@/Layouts/AuthLayout";
-import { Earth, Server, Unplug } from "lucide-react";
+import { Earth, Link, Server, Unplug } from "lucide-react";
 
 export default function MikrotikServer() {
     return (
@@ -28,9 +28,9 @@ export default function MikrotikServer() {
                                 </label>
                             </div>
 
-                            <button className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-105 shadow">
+                            <a href="/routers/add" className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-105 shadow">
                                 + Tambah Server
-                            </button>
+                            </a>
                         </div>
                         <div className="p-4">
                             <div className="overflow-x-auto">

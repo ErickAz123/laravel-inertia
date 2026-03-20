@@ -19,4 +19,10 @@ Route::get('/routers', function () {
     ]);
 })->middleware(['auth','verified'])->name('routers');
 
+Route::get('/routers/add', function () {
+    return Inertia::render('server/AddServer', [
+        'title'=> 'Tambah Server'
+    ]);
+})->middleware(['auth','verified'])->name('server');
+
 require __DIR__ . '/auth.php';
